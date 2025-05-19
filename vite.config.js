@@ -1,4 +1,5 @@
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 import { defineConfig } from 'vite'
 
 export default defineConfig(() => {
@@ -6,6 +7,16 @@ export default defineConfig(() => {
     server: {
       host: true
     },
-    plugins: [ViteImageOptimizer()],
+    plugins: [
+      ViteImageOptimizer(),
+      viteStaticCopy({
+        targets: [
+          {
+            src: 'service-worker.js',
+            dest: '.'
+          },
+        ]
+      })
+    ],
   }
 })
