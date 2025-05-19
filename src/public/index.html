@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <link rel="manifest" href="/assets/manifest-D8QZS3Ic.json" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>BP Mobile test</title>
+  <script type="module" crossorigin src="/assets/index-CKeOw7ad.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-D7sxRpJr.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title" data-translate="Get Unlimited <br>Access">Get Unlimited <br>Access</h1>
+    <div class="features">
+      <div class="features-item">
+        <p class="features-item__text" data-translate="Unlimited Art <br>Creation">Unlimited Art <br>Creation</p>
+      </div>
+      <div class="features-item">
+        <p class="features-item__text" data-translate="Exclusive <br>Styles">Exclusive <br>Styles</p>
+      </div>
+      <div class="features-item">
+        <p class="features-item__text" data-translate="Magic Avatars <br>With 20% Off">Magic Avatars <br>With 20% Off
+        </p>
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="btn yearly-btn">
+        <div class="btn-desc">
+          <p class="btn-desc__dur"></p>
+          <p class="btn-desc__price"></p>
+        </div>
+        <div class="btn-price">
+          <p class="btn-price__value"></p>
+          <p class="btn-price__dur"></p>
+        </div>
+      </button>
+    </div>
+  </div>
+
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .catch(err => console.error('Service worker registration failed:', err));
+      });
+    }
+  </script>
+</body>
+
+</html>

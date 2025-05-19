@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>BP Mobile test</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title" data-translate="Get Unlimited <br>Access">Get Unlimited <br>Access</h1>
+    <div class="features">
+      <div class="features-item">
+        <p class="features-item__text" data-translate="Unlimited Art <br>Creation">Unlimited Art <br>Creation</p>
+      </div>
+      <div class="features-item">
+        <p class="features-item__text" data-translate="Exclusive <br>Styles">Exclusive <br>Styles</p>
+      </div>
+      <div class="features-item">
+        <p class="features-item__text" data-translate="Magic Avatars <br>With 20% Off">Magic Avatars <br>With 20% Off
+        </p>
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="yearly-btn__wrapper active">
+        <button class="btn yearly-btn active">
+          <div class="btn-desc">
+            <p class="btn-desc__dur" data-translate="YEARLY ACCESS">YEARLY ACCESS</p>
+            <p class="btn-desc__price" data-translate="Just {{price}} per year" data-price="$39.99">Just $39.99 per year
+            </p>
+          </div>
+          <div class="btn-price">
+            <p class="btn-price__value" data-translate="{{price}} <br>per week" data-price="$0.48">$0.48 <br>per week</p>
+          </div>
+
+          <div class="best-offer__wrapper">
+            <p class="best-offer" data-translate="BEST OFFER">BEST OFFER</p>
+          </div>
+        </button>
+      </div>
+
+      <button class="btn weekly-btn">
+        <div class="btn-desc">
+          <p class="btn-desc__dur" data-translate="WEEKLY ACCESS">WEEKLY ACCESS</p>
+        </div>
+        <div class="btn-price">
+          <p class="btn-price__value" data-translate="{{price}} <br>per week" data-price="$6.99">$6.99 <br>per week</p>
+        </div>
+      </button>
+
+      <button class="btn continue-btn" data-translate="Continue">
+        Continue
+      </button>
+    </div>
+
+    <div class="links">
+      <a class="links-item" href="#" data-translate="Terms of Use">Terms of Use</a>
+      <a class="links-item" href="#" data-translate="Privacy Policy">Privacy Policy</a>
+      <a class="links-item" href="#" data-translate="Restore">Restore</a>
+    </div>
+
+    <a class="cross" href="#">
+      <img src="/cross.svg" alt="cross" width="24px" height="24px">
+    </a>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .catch(err => console.error('Service worker registration failed:', err));
+      });
+    }
+  </script>
+</body>
+
+</html>
